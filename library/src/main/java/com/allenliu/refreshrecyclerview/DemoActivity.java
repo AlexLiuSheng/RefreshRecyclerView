@@ -35,8 +35,11 @@ RefreshRecyclerView recyclerView;
             String text="测试数据";
             data.add(text);
         }
+        //设置layoutmanager
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        //设置adapter
         recyclerView.setAdapter(new MyAdapter(this,data));
+        //设置模式:REFRESH,LOADMORE,BOTH,NEITHER
         recyclerView.setMode(Mode.BOTH);
         recyclerView.setRereshListener(new RefreshListener() {
             @Override

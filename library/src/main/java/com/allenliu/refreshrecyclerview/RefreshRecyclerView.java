@@ -300,7 +300,7 @@ public class RefreshRecyclerView extends ViewGroup {
      * @param positionStart
      * @param itemCount
      */
-    public void notifyDataInsert(int positionStart, int itemCount) {
+    public void notifyDataInserted(int positionStart, int itemCount) {
         mStatus = STATUS_NORMAL;
         recyclerView.getAdapter().notifyItemRangeInserted(positionStart, itemCount);
     }
@@ -309,7 +309,7 @@ public class RefreshRecyclerView extends ViewGroup {
      * 删除item 刷新数据
      * @param position
      */
-    public void notifyDataRemove(int position) {
+    public void notifyDataRemoved(int position) {
         mStatus = STATUS_NORMAL;
         recyclerView.getAdapter().notifyItemRemoved(position);
     }
